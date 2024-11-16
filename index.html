@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kalendarz z wydarzeniami</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="calendar">
+    <div class="header">
+      <button id="prev">&lt;</button>
+      <h1 id="monthYear"></h1>
+      <button id="next">&gt;</button>
+    </div>
+    <div class="days">
+      <div>Nd</div>
+      <div>Pn</div>
+      <div>Wt</div>
+      <div>Śr</div>
+      <div>Cz</div>
+      <div>Pt</div>
+      <div>So</div>
+    </div>
+    <div id="dates" class="dates"></div>
+  </div>
+
+  <!-- Modal do dodawania wydarzeń -->
+  <div id="eventModal" class="modal">
+    <div class="modal-content">
+      <span class="close" id="closeModal">&times;</span>
+      <h2>Dodaj Wydarzenie</h2>
+      <input type="text" id="eventInput" placeholder="Wpisz wydarzenie">
+      <button id="saveEvent">Zapisz</button>
+    </div>
+  </div>
+
+  <!-- Sekcja listy wydarzeń -->
+  <div class="event-list">
+    <h2>Lista Wydarzeń</h2>
+    <ul id="eventList"></ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
